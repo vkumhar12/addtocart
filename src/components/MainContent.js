@@ -3,9 +3,11 @@ import { CartContent } from "./Itemsss"
 import ProductDetails from "./ProductDetails"
 
 export default function MainContent() {
-    const { item, deleteAllProduct } = useContext(CartContent)
+    const { item, deleteAllProduct, totalQuantity, totalAmount } = useContext(CartContent)
+
     return (
         <div>
+            <p className="text-gray-600 text-xl font-medium">You have {totalQuantity} items in Cart</p>
             <div class="hidden lg:grid grid-cols-2 py-6 sticky top-0 border-b border-gray-200 bg-white">
                 <div class="font-normal text-xl leading-8 text-gray-500">Product</div>
                 <p class="font-normal text-xl leading-8 text-gray-500 flex items-center justify-between">
@@ -29,15 +31,15 @@ export default function MainContent() {
             <div class="bg-gray-50 rounded-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
                 <div class="flex items-center justify-between w-full mb-6">
                     <p class="font-normal text-xl leading-8 text-gray-400">Sub Total</p>
-                    <h6 class="font-semibold text-xl leading-8 text-gray-900">₹360.00</h6>
+                    <h6 class="font-semibold text-xl leading-8 text-gray-900">₹3{totalAmount}</h6>
                 </div>
                 <div class="flex items-center justify-between w-full pb-6 border-b border-gray-200">
                     <p class="font-normal text-xl leading-8 text-gray-400">Delivery Charge</p>
-                    <h6 class="font-semibold text-xl leading-8 text-gray-900">₹45.00</h6>
+                    <h6 class="font-semibold text-xl leading-8 text-gray-900">₹0.00</h6>
                 </div>
                 <div class="flex items-center justify-between w-full py-6">
                     <p class="font-manrope font-medium text-2xl leading-9 text-gray-900">Total</p>
-                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500">₹405.00</h6>
+                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500">₹{totalAmount}</h6>
                 </div>
             </div>
             <div class="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
