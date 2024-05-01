@@ -7,22 +7,22 @@ export default function ProductDetails({ id, title, img, description, price, qua
     const { deleteProduct, increment, decrement } = useContext(CartContent)
 
     return (
-        <div class="grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6  py-6 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6  py-6 ">
             <div
-                class="flex items-center flex-col min-[550px]:flex-row gap-3  min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
-                <div class="img-box"><img src={img} alt="perfume bottle image" class="xl:w-[140px]" /></div>
-                <div class="pro-data w-full max-w-sm ">
-                    <h5 class="font-semibold text-xl leading-8 text-black max-[550px]:text-center">{title}
+                className="flex items-center flex-col min-[550px]:flex-row gap-3  min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
+                <div className="img-box"><img src={img} alt="perfume bottle image" className="xl:w-[140px]" /></div>
+                <div className="pro-data w-full max-w-sm ">
+                    <h5 className="font-semibold text-xl leading-8 text-black max-[550px]:text-center">{title}
 
                     </h5>
                     <p
-                        class="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
+                        className="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
                         {description}</p>
-                    <h6 class="font-medium text-lg leading-8 text-indigo-600  max-[550px]:text-center">₹{price}</h6>
+                    <h6 className="font-medium text-lg leading-8 text-indigo-600  max-[550px]:text-center">₹{price}</h6>
                 </div>
             </div>
             <div
-                class="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
+                className="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
                 <div className="flex items-center w-full mx-auto justify-center">
                     <button
                         className="group rounded-l-full px-6 py-[18px] border border-gray-200 flex items-center justify-center shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-200 hover:border-gray-300 hover:bg-gray-50"
@@ -45,11 +45,11 @@ export default function ProductDetails({ id, title, img, description, price, qua
                     </button>
                 </div>
 
-                <h6 class="font-manrope font-bold text-2xl leading-9 text-black w-full max-w-[176px] text-center">
+                <h6 className="font-manrope font-bold text-2xl leading-9 text-black w-full max-w-[176px] text-center">
                     ₹{price}</h6>
 
                 <button
-                    class="text-red-600 border hover:bg-red-500 hover:text-white cursor-pointer p-2 rounded-3xl border-red-300 font-manrope font-bold text-2xl leading-9 w-full max-w-[176px] text-center" onClick={() => deleteProduct(id)}>
+                    className="text-red-600 border hover:bg-red-500 hover:text-white cursor-pointer p-2 rounded-3xl border-red-300 font-manrope font-bold text-2xl leading-9 w-full max-w-[176px] text-center" onClick={() => deleteProduct(id)}>
                     Remove</button>
             </div>
 
