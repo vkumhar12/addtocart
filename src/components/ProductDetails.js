@@ -13,7 +13,6 @@ export default function ProductDetails({ id, title, img, description, price, qua
                 <div className="img-box"><img src={img} alt="perfume bottle image" className="xl:w-[140px]" /></div>
                 <div className="pro-data w-full max-w-sm ">
                     <h5 className="font-semibold text-xl leading-8 text-black max-[550px]:text-center">{title}
-
                     </h5>
                     <p
                         className="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
@@ -52,11 +51,6 @@ export default function ProductDetails({ id, title, img, description, price, qua
                     className="text-red-600 border hover:bg-red-500 hover:text-white cursor-pointer p-2 rounded-3xl border-red-300 font-manrope font-bold text-2xl leading-9 w-full max-w-[176px] text-center" onClick={() => deleteProduct(id)}>
                     Remove</button>
             </div>
-
-
-
-
-
         </div>
     )
 }
