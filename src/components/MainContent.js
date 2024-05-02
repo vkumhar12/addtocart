@@ -17,11 +17,14 @@ export default function MainContent() {
                     <span class="w-full max-w-[200px] text-center">Remove</span>
                 </p>
             </div>
-            {
-                item.map((data) => {
-                    return <ProductDetails key={data.id} {...data} />
-                })
-            }
+            <div className="h-[40rem] overflow-y-scroll">
+                {
+                    item.map((data) => {
+                        return <ProductDetails key={data.id} {...data} />
+                    })
+                }
+
+            </div>
             <div className="w-full flex items-end justify-end pt-5 pb-5">
                 <h6
                     class="bg-red-600 border hover:bg-red-600  cursor-pointer p-2 text-white rounded border-red-300 font-manrope font-bold text-2xl leading-9 w-full max-w-[176px] text-center" onClick={deleteAllProduct}>
